@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * @file
+ * Contains media_video_micromodal.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/*
+ * @todo
+ * play image?
+ * x to close
+ * esc not working on close
+ *
+ * best way to include library
+ * isApplicable = video bundle
+ *
+ * CSS
+ *   container width
+ *
+ *
+ */
+
+/**
+ * Implements hook_help().
+ */
+function media_video_micromodal_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the media_video_micromodal module.
+    case 'help.page.media_video_micromodal':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Displays media in a modal using micromodal.js.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function media_video_micromodal_theme() {
+  return [
+    'media_video_micromodal' => [
+      'render element' => 'children',
+      'variables' => [
+        'modal_id' => NULL,
+        'thumbnail_url' => NULL,
+        'iframe_src' => NULL,
+      ],
+    ],
+  ];
+}

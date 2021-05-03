@@ -1,0 +1,8 @@
+micromodal_libraries:
+  js:
+    js/micromodal.min.js: {}
+    js/micromodal-init.js: {}
+  css:
+    theme:
+      css/micromodal.css: {}
+

@@ -1,0 +1,11 @@
+<div class="modal micromodal-slide" id="{{ modal_id }}" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="{{ modal_id }}-title">
+      <a class="modal__btn" data-micromodal-close aria-label="Close this dialog window">X</a>
+      <main class="modal__content" id="{{ modal_id }}-content">
+        <div class="videoWrapper"><iframe src="{{ iframe_src }}" frameborder="0" allowtransparency="" class="media-oembed-content" title="Time Value of Money"></iframe></div>
+      </main>
+    </div>
+  </div>
+</div>
+<div{{ item.attributes.addClass('field__item') }}><a class="myButton" data-micromodal-trigger="{{ modal_id }}"><img src="{{ thumbnail_url }}" /></a></div>
